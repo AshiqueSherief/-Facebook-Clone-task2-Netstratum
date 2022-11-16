@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Email from "./Compounents/Email";
-import Password from "./Compounents/Password";
+import Email from "../Compounents/Email";
+import Password from "../Compounents/Password";
 import "./App.css";
 
 function App() {
@@ -48,16 +48,15 @@ function App() {
         <p className="container__box--title">Log in to Facebook</p>
         <form onSubmit={submit}>
 
-
+          {/* compounent Email */}
           <Email name="name" change={update} value={data.name} type="email" />
           <br />
+
+          {/* compounent PAssword */}
           <Password name="password" change={update} value={data.password} />
           <button type="submit" onClick={Validate} className="container__box--button">
             Log in
           </button>
-
-
-
         </form>
         <div className="links">
           <a
